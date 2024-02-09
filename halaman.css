@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+}
+
+.sidebar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 110px;
+    height: 100vh;
+    padding:  0 1.7rem;
+    color: #05cf05;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background: rgba(113, 99, 186, 255);
+}
+
+.sidebar:hover {
+    width: 240px;
+    transition: 0.5s;
+}
+
+.logo {
+    height: auto; /* Remove fixed height */
+    padding: 16px; /* Keep padding for spacing */
+    color: white;
+    display: flex; /* Add flex display */
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; /* Keep image size */
+    width: auto; /* Adjust width automatically */
+    margin-right: 10px; /* Add some spacing between image and text */
+}
+
+.menu {
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all 0.5 ease-in-out;
+}
+
+.menu li:hover , .active{
+    background: #e0e0e058;
+}
+
+.menu a {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.menu a span {
+    overflow: hidden;
+}
+
+.menu a i {
+    font-size: 1.2rem;
+}
+
+.keluar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.main-content {
+    position: relative;
+    background: #fff;
+    width: 100%;
+    padding: 1rem;
+}
+
+.header-wrapper img{
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 2rem;
+    margin-bottom: 1rem;
+}
+ 
+.header-title {
+    color: rgba(113, 99, 100, 255);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-box {
+    background: rgba(237, 237, 237);
+    border-radius: 15px;
+    color: rgba(113, 99, 186, 255);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 20px;
+    flex: 1;
+    margin: 0 auto;
+}
+
+.search-box input {
+    background: transparent;
+    padding: 10px;
+}
+
+.search-box i {
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.search-box i:hover {
+    transform: scale(1.3);
+}
+
+.settings-button, 
+.notification-button, 
+.profile-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px; 
+    border-radius: 50%; 
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+.settings-button i {
+    font-size: 24px;
+    color: #333; 
+}
+
+.notification-button i {
+    font-size: 24px;
+    color: #333; 
+}
+
+
+.profile-button i {
+    font-size: 24px;
+    color: #333; 
+}
+.card-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card p {
+    color: #666;
+}
+
+.buy-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buy-button:hover {
+    background-color: #0056b3;
+}
+/* CSS yang ada sebelumnya */
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Memungkinkan kartu untuk melingkar ketika ukuran layar terlalu kecil */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 250px; /* Lebar minimum untuk kartu */
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card p {
+    color: #666;
+}
+
+/* Media queries untuk responsivitas */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column; /* Mengubah arah tata letak menjadi satu kolom pada layar kecil */
+    }
+
+    .card {
+        min-width: auto; /* Menghapus lebar minimum agar kartu dapat menyesuaikan ukuran layar */
+        width: calc(100% - 40px); /* Mengatur lebar kartu agar tetap sejajar dengan kontainer */
+    }
+}
